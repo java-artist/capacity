@@ -6,9 +6,9 @@ server:
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/capacity
+    url: jdbc:mysql://ec2-3-141-85-3.us-east-2.compute.amazonaws.com:3306/capacity
     username: root
-    password: root
+    password: Root@123
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
