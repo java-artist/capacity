@@ -2,7 +2,6 @@ package com.caceis.capacity.service.impl;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +10,6 @@ import com.caceis.capacity.dto.ProjectsDto;
 import com.caceis.capacity.entity.Project;
 import com.caceis.capacity.repository.ProjectRepository;
 import com.caceis.capacity.response.ProjectResponse;
-import com.caceis.capacity.response.TaskResponse;
 import com.caceis.capacity.service.ProjectService;
 
 import javassist.NotFoundException;
