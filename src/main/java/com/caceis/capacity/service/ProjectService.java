@@ -12,6 +12,5 @@ public interface ProjectService {
 	public Project add(Project project);
 	public List<Project> getAll();
 	public Project get(int id) throws NotFoundException;
-	public List<ProjectResponse> getAllProjectWithTasks();
 
 }

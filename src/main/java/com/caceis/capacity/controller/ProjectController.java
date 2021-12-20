@@ -52,10 +52,4 @@ public class ProjectController {
 	public ResponseEntity<List<Project>> getAll() {
 			return ResponseEntity.ok(this.projectService.getAll());
 	}
-
-	
-	@GetMapping(CONTEXT+"/getAllWithTask")
-	public ResponseEntity<List<ProjectResponse>> getAllWithTask() {
-			return ResponseEntity.ok(this.projectService.getAllProjectWithTasks());
-	}
 }

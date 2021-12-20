@@ -42,21 +42,4 @@ public class ProjectServiceImpl implements ProjectService {
 		.orElseThrow(() -> new NotFoundException("Not found the project id: "+id));
 		
 	}
-
-	@Override
-	public List<ProjectResponse> getAllProjectWithTasks() {
-		List<ProjectsDto> results = projectRepository.getProjectsAndTasks();
-
-		return Collections.EMPTY_LIST;
-		
-		
-//		return getProjectsIds(results).stream()
-//				.map(project -> 
-//					new ProjectResponse(
-//						project.getProjectId(),
-//						project.getProjectName(), 
-//						getTasks(results, project.getProjectId())))
-//				.collect(Collectors.toList());
-	}
-
 }
