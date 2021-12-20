@@ -15,6 +15,8 @@ import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.sun.istack.NotNull;
+
 @Entity
 public class Task implements Serializable {
 
@@ -25,6 +27,7 @@ public class Task implements Serializable {
 	private int id;
 	private String uuid;
 	private String title;
+	private Long estimation;
 	
     @ManyToOne
     @NotFound(action=NotFoundAction.IGNORE)
@@ -61,6 +64,14 @@ public class Task implements Serializable {
 		this.title = title;
 	}
 
+	public Long getEstimation() {
+		return estimation;
+	}
+
+	public void setEstimation(Long estimation) {
+		this.estimation = estimation;
+	}
+
 	public Project getProject() {
 		return project;
 	}
@@ -85,8 +96,8 @@ public class Task implements Serializable {
 		this.updatedAt = updatedAt;
 	}
 
-	@Override
-	public String toString() {
-		return "Task [id=" + id + ", title=" + title + "]";
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
+
 }
